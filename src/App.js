@@ -4,11 +4,11 @@ import Layout from "./components/Layout/Layout";
 import Products from "./components/Shop/Products";
 
 function App() {
-  const toggleCart = useSelector((state) => state.cart.toggle);
+  const showCart = useSelector((state) => state.ui.cartIsVisible);
 
   return (
     <Layout>
-      {toggleCart && <Cart />}
+      {showCart && <Cart />}
       <Products />
     </Layout>
   );
